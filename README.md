@@ -27,3 +27,7 @@ z0 z1 zn
    - (4x4)(4xN) = (4xN) but why (4x4)?
 - multiplicative identity
 
+0309
+
+double stop = 1.001; //buffer for imprecise floatin
+for (t=step; t<=stop; t+=step)
