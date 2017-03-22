@@ -1,0 +1,9 @@
+0321
+Rectangular prism:
+  given: one vertex (top left front), height, width, depth
+  defining points: vertices
+Sphere:
+  given: center, radius
+  dp: points on the surface
+  *rotate ONLY y and x axis
+T O R U S:
