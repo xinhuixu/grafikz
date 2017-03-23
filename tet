@@ -6,4 +6,37 @@ Sphere:
   given: center, radius
   dp: points on the surface
   *rotate ONLY y and x axis
+X Rotation
+```
+1 0 0
+0 cosj -sinj
+0 sinj cosj
+```
+* CIrcle
+```
+rcos(h)
+rsin(h)
+0
+```
+= SPhere
+```
+rcosh + cx
+rsinhcosj + cy
+rsinhsinj + cz
+```
+h: 0 to 2pi, j: 0 to pi
+OR! (Imagine semicircle going 2pi) h: 0 to pi, j: 0 to 2pi (but only x-axis)
 T O R U S:
+given: center, circle radius torus radius
+dp: points on surface
+```
+cosj 0 sin j
+0 1 0
+-sinj 0 cosj
+```
+rcosh+ R
+rsinh
+0
+```
+cosj(cosh+R) + cx
+
