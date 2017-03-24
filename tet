@@ -39,4 +39,10 @@ rsinh
 0
 ```
 cosj(cosh+R) + cx
+TORUS: 2PI FOR BOTH
 
+for rot: 0 ->1
+  for circ: 0 ->1
+    x = rcos(circ*PI)+cx
+    y = rsin(circ*PI) * cos(rot*2PI) + cy
+    z =
