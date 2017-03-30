@@ -1,0 +1,9 @@
+wireframe mesh
+  defining points are used to draw edges that surround an object
+  
+polygon mesh
+  needed to render 3D
+  
+add_ functions add triangles to the polygon matrix
+what sides are visible?
+VERTICES NEED TO BE ADDED IN C O U N T E R C L O C K W I S E ORDER
