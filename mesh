@@ -7,3 +7,14 @@ polygon mesh
 add_ functions add triangles to the polygon matrix
 what sides are visible?
 VERTICES NEED TO BE ADDED IN C O U N T E R C L O C K W I S E ORDER
+
+Hidden Surface Removal
+  ignore back-facing polygons
+  v-> vector from the surface of the polygon to the viewer
+  n-> surface normal: vector perp to the surface of polygon
+  
+  if pointing at the viewer: angle is 0 deg (not from my eye out but into my eye!)
+  from -90 to 90 we can see a surface.
+1. calculate n->
+2. find theta btwn n and v
+3. if -90 < theta < 90, draw the polygon
