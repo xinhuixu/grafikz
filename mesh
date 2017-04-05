@@ -16,5 +16,13 @@ Hidden Surface Removal
   if pointing at the viewer: angle is 0 deg (not from my eye out but into my eye!)
   from -90 to 90 we can see a surface.
 1. calculate n->
+    find 2 vectors that share an Endpoint and go out from the the common point
+    A = p1 - p0 = < x1-x0,...>
+    B = p2 - p0
+    N = A x B 
+        <ay*bz-az*by, azbx-axbz, axby-aybx>
+    N dot V = NVcos(theta), cos(theta) is always positive if it is our range!!!
+    a hardcoded V: <0,0,1>
+  Do this is the draw step not the add step!
 2. find theta btwn n and v
 3. if -90 < theta < 90, draw the polygon
