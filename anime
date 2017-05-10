@@ -20,3 +20,25 @@ $ animate -delay n anim/simple0* simple.gif
 $ animate simple.gif nOT display
 
 # ./mdl simple.mdl
+
+symbol table:
+stores current value of any symb/variable
+hash table
+  keys: symb names
+  values: type & value
+  {bigenator: [knob, 0]}
+  
+Pass 1: setup
+  are we animating?
+  look for & set: frames and basenames
+  if vary is found but frames is not set, Exit
+  if frames and vary found but basename is not, set a DEFAULT
+Pass 2
+  if there is an invalid vary range EXit
+make sure you print a good error message!
+  0 -> big:1, spin:0
+  1 -> big:1, spin:.2
+Pass 3:
+  for each frame set symb table val for each knob
+  apply kob vals from symbol table
+  at the end of each loop save the current image
