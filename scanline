@@ -1,0 +1,31 @@
+filling in polygons by drawing consecutive horizontal OR vertical lines
+keep track of the x and y together
+find Bottom, middle and top vertices
+  map BMT to V0 V1 V2 -> P0
+ 
+what are the endpoints to these lines?
+Y: starts at Bottom y, -> Top y
+  dy = 1
+first time is just.. B to B
+
+X0: Bx -> Tx
+X1: Bx -> Mx
+    then! Mx -> Tx
+      when do we know we've hit Mx? use My!
+  dx0 = (Tx - Bx) / (Ty - By)
+  dx1 = (Mx - Bx) / (My - By) #DEGENERATE: DIVISION BY ZERO
+  dx1 part two (Tx - My)/(Ty - My)
+  
+  using ? in python
+
+There isn't that much ~special cases~.. even if you have two bottoms, just choose one to be bottom
+
+
+draw_polygons"
+  for each pol
+    calc normal
+    if normalz > 0
+      scanline
+      draw_line
+      draw_line
+      draw_line
