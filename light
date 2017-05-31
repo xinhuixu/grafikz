@@ -1,0 +1,15 @@
+lighting & shading
+
+2 kinds of light
+  ambient light: light that permeates entire image
+  point light sources: 
+  calculating lighting:
+    I : color(illumination) of a surface
+    I = Iambient + Idiffuse + Ispecular
+    
+    only one ambient
+    ambient 255 255 255
+    light l1 [0 1 1]=xyzposition 255 0 255
+    constants white 0.25 0.5 0.25 [these 3 is Ired = Ia+Id+Is] 0.25 0.5 0.25 0.25 0.5 0.25
+    if constants white 1 0 0 1 0 0 1 0 0 >>IT'S ALL AMBIENT LIGHT! 
+     
