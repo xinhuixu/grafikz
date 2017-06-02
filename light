@@ -39,11 +39,34 @@ we need:
        BUT... the VIEW vector matters!! reflection strongest when alpha (difference between Reflected and View vector)
        
       Ispecular = L*Ks*cos(alpha)
+      
         cos(alpha) = R dot V
         R> = P> + S> (vector stuff)
         P> is the PROJECTION OF L> onto N> (the normal)
             P> = N>(N> dot L>)
         S> = P> + L>
         R = P + P - L = 2P - L
-        R = (N*2(N dot L)) - (L) ***NOTE THAT IT'S VECTOR SUBTRACTION!!
+        R = ( N*2 * (N dot L) ) - (L) ***NOTE THAT IT'S VECTOR SUBTRACTION!!
+        
+        cos(alpha) = (( N*2 * (N dot L) ) - (L)) dot V
+        
+      Ispecular = L*Ks*(cos(alpha)^p)
+      p is how quickly the reflection fades!!! up to you
       
+      
+Ispecular + (Idiff = LKd(N dot L)) + Iambient SHOULD BE [0,255] JUST LIMIT, DO NOT MOD
+IMPORTANT: MAKE (COS(ALPHA)^P) and (N dot L) 0 WHEN THEY ARE NEGATIVE!!!!!!!!
+
+Shading Model:
+  how often do I calculate I?
+  
+  Flat shading: calc I once per polygon
+                  improves by more polygon
+  Gouraud shading: Generate I for each pixel
+    create list of vertex normals
+  Phong shading: CALCULATE I for every pixel
+    create list of vertex normals
+    generate new normals in scan & drawline
+    calculate new normals for every pixel
+                  
+
